@@ -165,43 +165,103 @@
 
     <!-- Testimonials -->
     <section id="testimonials">
-      <h2>Muito bom, o sistema é ótimo para encontrar o seu gato.</h2>
-      <img class="testimonials-image" src="img/Alisson.png" alt="Alisson" />
-      <em>Juazeiro, Ceará</em>
+      <!-- Carousel -->
+      <div
+        id="testimonials-carousel"
+        class="carousel slide"
+        data-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active text-center">
+            <h2>Muito bom, o sistema é ótimo para encontrar o seu gato.</h2>
+            <img
+              class="testimonials-image"
+              src="img/Alisson.png"
+              alt="Alisson"
+            />
+            <em>Juazeiro, Ceará</em>
+          </div>
+          <div class="carousel-item text-center">
+            <h2>Meu app é muito bom, um dos melhores do mercado.</h2>
+            <img
+              class="testimonials-image"
+              src="img/Gato-preto.png"
+              alt="Dukeza"
+            />
+            <em>Crato, Ceará</em>
+          </div>
+        </div>
+
+        <!-- Controles -->
+        <a
+          class="carousel-control-prev"
+          href="#testimonials-carousel"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#testimonials-carousel"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Próximo</span>
+        </a>
+      </div>
+      <!-- Fim Carousel -->
     </section>
 
     <!-- Press -->
     <section id="press" class="text-center">
-      <img src="img/1.png" alt="logo1" />
-      <img src="img/2.png" alt="logo2" />
-      <img src="img/3.png" alt="logo3" />
-      <img src="img/4.png" alt="logo4" />
+      <img class="press-logo" src="img/1.png" alt="logo1" />
+      <img class="press-logo" src="img/2.png" alt="logo2" />
+      <img class="press-logo" src="img/0.png" alt="logo0" />
+      <img class="press-logo" src="img/3.png" alt="logo3" />
+      <img class="press-logo" src="img/4.png" alt="logo4" />
     </section>
 
-    <!-- Pricing -->
-    <section id="pricing" class="container text-center">
+    <section id="pricing" class="container py-5">
       <div class="row">
-        <div class="col-lg-4">
-          <h3>Plano Básico</h3>
-          <h2>Grátis</h2>
-          <p>Funcionalidades essenciais</p>
-          <button type="button" class="btn btn-outline-dark">
-            Inscreva-se
-          </button>
+        <!-- Plano Básico -->
+        <div class="col-lg-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <h3 class="card-title">Plano Básico</h3>
+              <h2 class="card-price">Grátis</h2>
+              <p class="card-text">Funcionalidades essenciais</p>
+              <button type="button" class="btn btn-outline-dark">
+                Inscreva-se
+              </button>
+            </div>
+          </div>
         </div>
 
-        <div class="col-lg-4">
-          <h3>Plano Padrão</h3>
-          <h2>R$50,00 / mês</h2>
-          <p>Mais recursos e suporte</p>
-          <button type="button" class="btn btn-dark">Inscreva-se</button>
+        <!-- Plano Padrão -->
+        <div class="col-lg-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <h3 class="card-title">Plano Padrão</h3>
+              <h2 class="card-price">R$50,00 / mês</h2>
+              <p class="card-text">Mais recursos e suporte</p>
+              <button type="button" class="btn btn-dark">Inscreva-se</button>
+            </div>
+          </div>
         </div>
 
-        <div class="col-lg-4">
-          <h3>Plano Premium</h3>
-          <h2>R$99,00 / mês</h2>
-          <p>Todos os recursos liberados</p>
-          <button type="button" class="btn btn-dark">Inscreva-se</button>
+        <!-- Plano Premium -->
+        <div class="col-lg-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <h3 class="card-title">Plano Premium</h3>
+              <h2 class="card-price">R$99,00 / mês</h2>
+              <p class="card-text">Todos os recursos liberados</p>
+              <button type="button" class="btn btn-dark">Inscreva-se</button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
