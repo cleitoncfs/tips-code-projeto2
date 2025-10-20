@@ -2,29 +2,32 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+/* Tipografia */
 h1 {
   font-family: 'Montserrat', sans-serif;
   font-size: 3rem;
   line-height: 1.5;
-  font-weight: 900; /* Black */
+  font-weight: 900;
+  margin-bottom: 1.5rem;
 }
 
 h2 {
   font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
   line-height: 1.5;
-  font-weight: 700; /* Bold */
+  font-weight: 700;
 }
 
 h3 {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 700; /* Bold */
+  font-weight: 700;
 }
 
 p {
   color: #8f8f8f;
 }
 
+/* Header */
 #title {
   background-color: #051d35;
   color: #fff;
@@ -34,15 +37,16 @@ p {
   padding: 3% 15%;
 }
 
+/* Navbar */
 .navbar-brand {
   font-family: 'Ubuntu', sans-serif;
   font-size: 2.5rem;
   font-weight: bold;
 }
 
-/* Navigation Bar */
 .navbar {
   padding: 0 0 4.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .nav-item {
@@ -53,12 +57,18 @@ p {
   font-size: 1.2rem;
   font-family: 'Montserrat', sans-serif;
   cursor: pointer;
+  transition: color 0.3s ease;
 }
 
-/* title-image */
+.nav-link:hover {
+  color: #ff4c68 !important;
+}
+
+/* Hero */
 .title-image {
-  width: 60%;
-  transform: rotate(25deg);
+  width: 100%;
+  max-width: 400px;
+  transform: rotate(15deg);
 }
 
 /* Features Section */
@@ -69,12 +79,19 @@ p {
 .features-box {
   text-align: center;
   padding: 5%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.features-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .icon {
   color: #ef8172;
   font-size: 3rem;
   margin-bottom: 1rem;
+  transition: color 0.3s ease;
 }
 
 .icon:hover {
@@ -85,27 +102,162 @@ p {
 #testimonials {
   padding: 7% 15%;
   text-align: center;
-  background-color: #ef8172;
+  background: linear-gradient(135deg, #ef8172 0%, #ff4c68 100%);
   color: #fff;
 }
 
 .testimonials-image {
-  width: 10%;
-  border-radius: 100%;
-  margin: 20px;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 20px auto;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.testimonials-image:hover {
+  transform: scale(1.05);
 }
 
 .carousel-item {
-  padding: 7% 15%;
+  padding: 5% 10%;
 }
 
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%);
+}
+
+/* Press Section */
 #press {
   background-color: #ef8172;
   text-align: center;
+  padding: 3rem 0;
 }
 
 .press-logo {
-  width: 5%;
-  margin: 20px 20px 50px auto;
-  border-radius: 0.5rem;
+  max-height: 60px;
+  margin: 20px;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.press-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* Pricing Section */
+#pricing {
+  padding: 7% 0;
+  background-color: #f9f9f9;
+}
+
+#pricing .card {
+  border: none;
+  border-radius: 0.75rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#pricing .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+#pricing .card-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#pricing .card-price {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #ff4c68;
+  margin-bottom: 1rem;
+}
+
+#pricing .btn {
+  margin-top: 1rem;
+  padding: 0.6rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+/* Destaque no plano recomendado */
+#pricing .card.recommended {
+  border: 2px solid #ff4c68;
+  transform: scale(1.05);
+}
+
+#pricing .card.recommended .card-price {
+  color: #ff4c68;
+}
+
+/* Call to Action Section */
+#cta {
+  background: linear-gradient(135deg, #051d35 0%, #0a2f57 100%);
+  color: #fff;
+  padding: 5% 15%;
+}
+
+#cta h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+#cta .btn {
+  margin: 0.5rem;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+#cta .btn-dark {
+  background-color: #ff4c68;
+  border: none;
+}
+
+#cta .btn-dark:hover {
+  background-color: #e63b57;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+#cta .btn-outline-dark {
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+#cta .btn-outline-dark:hover {
+  background-color: #fff;
+  color: #051d35;
+  transform: translateY(-3px);
+}
+
+/* Footer Section */
+#footer {
+  background-color: #051d35;
+  color: #ccc;
+  padding: 30px 0;
+  font-size: 0.9rem;
+}
+
+#footer p {
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+#footer p:hover {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+#footer p:last-child {
+  font-size: 0.8rem;
+  color: #aaa;
 }
