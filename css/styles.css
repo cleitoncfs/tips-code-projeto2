@@ -1,5 +1,7 @@
+/* ========== CONFIGURAÇÕES GERAIS ========== */
 body {
   font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
 }
 
 /* Tipografia */
@@ -27,7 +29,7 @@ p {
   color: #8f8f8f;
 }
 
-/* Header */
+/* ========== HEADER ========== */
 #title {
   background-color: #051d35;
   color: #fff;
@@ -64,14 +66,15 @@ p {
   color: #ff4c68 !important;
 }
 
-/* Hero */
+/* Hero Section */
 .title-image {
   width: 100%;
   max-width: 400px;
   transform: rotate(15deg);
+  transition: transform 0.3s ease;
 }
 
-/* Features Section */
+/* ========== FEATURES SECTION ========== */
 #features {
   padding: 7% 15%;
 }
@@ -80,6 +83,7 @@ p {
   text-align: center;
   padding: 5%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 2rem;
 }
 
 .features-box:hover {
@@ -98,7 +102,7 @@ p {
   color: #ff4c68;
 }
 
-/* Testimonials Section */
+/* ========== TESTIMONIALS SECTION ========== */
 #testimonials {
   padding: 7% 15%;
   text-align: center;
@@ -130,7 +134,7 @@ p {
   filter: invert(100%);
 }
 
-/* Press Section */
+/* ========== PRESS SECTION ========== */
 #press {
   background-color: #ef8172;
   text-align: center;
@@ -150,7 +154,7 @@ p {
   opacity: 1;
 }
 
-/* Pricing Section */
+/* ========== PRICING SECTION ========== */
 #pricing {
   padding: 7% 0;
   background-color: #f9f9f9;
@@ -196,7 +200,7 @@ p {
   color: #ff4c68;
 }
 
-/* Call to Action Section */
+/* ========== CALL TO ACTION SECTION ========== */
 #cta {
   background: linear-gradient(135deg, #051d35 0%, #0a2f57 100%);
   color: #fff;
@@ -239,7 +243,7 @@ p {
   transform: translateY(-3px);
 }
 
-/* Footer Section */
+/* ========== FOOTER SECTION ========== */
 #footer {
   background-color: #051d35;
   color: #ccc;
@@ -262,32 +266,63 @@ p {
   color: #aaa;
 }
 
-/* Ajustes gerais para tablets e celulares */
-@media (max-width: 991px) {
+/* ========== MEDIA QUERIES - RESPONSIVIDADE ========== */
+
+/* Tablets Grandes (iPad Pro 11" - 834px) */
+@media (max-width: 834px) {
   .container-fluid {
-    padding: 5% 8%;
+    padding: 4% 8%;
+  }
+
+  #title {
+    padding: 8% 5%;
   }
 
   h1 {
-    font-size: 2.2rem;
-    line-height: 1.3;
+    font-size: 2.5rem;
   }
 
-  h2 {
-    font-size: 1.6rem;
+  .title-image {
+    max-width: 320px;
+    transform: rotate(10deg);
+    margin-top: 2rem;
   }
 
-  h3 {
-    font-size: 1.2rem;
+  /* Features - 2 colunas em tablet */
+  #features .col-lg-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
   }
 
-  p {
-    font-size: 0.95rem;
+  /* Pricing - ajusta destaque */
+  #pricing .card.recommended {
+    transform: scale(1.03);
   }
 }
 
-/* Ajustes específicos para telas menores que 768px */
+/* Tablets Médios (768px) */
 @media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 2rem;
+  }
+
+  .nav-link {
+    font-size: 1.1rem;
+  }
+
+  /* Navbar collapse para mobile */
+  .navbar-collapse {
+    background-color: #051d35;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+  }
+
+  .nav-item {
+    padding: 0.5rem 0;
+  }
+
   /* Hero Section */
   #title {
     text-align: center;
@@ -295,14 +330,15 @@ p {
   }
 
   #title h1 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     margin-bottom: 1rem;
   }
 
   .title-image {
-    max-width: 250px;
+    max-width: 280px;
+    transform: rotate(5deg);
     margin: 2rem auto 0;
-    transform: rotate(0deg); /* evita corte em telas pequenas */
+    display: block;
   }
 
   /* Features */
@@ -320,8 +356,8 @@ p {
   }
 
   .testimonials-image {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
   }
 
   .carousel-item {
@@ -330,8 +366,8 @@ p {
 
   /* Press */
   .press-logo {
-    max-height: 40px;
-    margin: 10px;
+    max-height: 45px;
+    margin: 15px;
   }
 
   /* Pricing */
@@ -344,7 +380,7 @@ p {
   }
 
   #pricing .card-price {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
 
   /* CTA */
@@ -353,38 +389,210 @@ p {
   }
 
   #cta h3 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Celulares (até 480px) - Xiaomi Mi 11i etc */
+@media (max-width: 480px) {
+  .container-fluid {
+    padding: 8% 5%;
+  }
+
+  /* Header/Navbar */
+  .navbar {
+    padding: 0 0 2.5rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.8rem;
+  }
+
+  .navbar-toggler {
+    padding: 0.25rem 0.5rem;
+    font-size: 1rem;
+  }
+
+  /* Hero Section */
+  #title {
+    padding: 15% 5%;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+
+  .title-image {
+    max-width: 220px;
+    transform: rotate(0deg);
+    margin: 1.5rem auto 0;
+  }
+
+  /* Botões do hero */
+  #title .btn {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  /* FEATURES - CORREÇÃO PRINCIPAL: 1 COLUNA */
+  #features {
+    padding: 12% 5%;
+  }
+
+  .features-box {
+    padding: 1.5rem 1rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Garante que fique uma coluna em mobile */
+  #features .col-lg-4,
+  #features .col-md-6,
+  #features .col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .icon {
+    font-size: 2.5rem;
+  }
+
+  /* Testimonials */
+  #testimonials {
+    padding: 15% 5%;
+  }
+
+  .testimonials-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .carousel-item {
+    padding: 1rem;
+  }
+
+  .carousel-item h2 {
+    font-size: 1.4rem;
+  }
+
+  /* Press */
+  .press-logo {
+    max-height: 35px;
+    margin: 10px 8px;
+  }
+
+  /* Pricing - cards em coluna única */
+  #pricing {
+    padding: 12% 5%;
+  }
+
+  #pricing .card {
+    margin-bottom: 2rem;
+  }
+
+  #pricing .card.recommended {
+    transform: scale(1.02);
+  }
+
+  #pricing .card-price {
     font-size: 1.5rem;
+  }
+
+  /* CTA */
+  #cta {
+    padding: 15% 5%;
+    text-align: center;
+  }
+
+  #cta h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
   }
 
   #cta .btn {
     display: block;
     width: 100%;
     margin: 0.5rem 0;
+    padding: 0.7rem 1.5rem;
   }
 
   /* Footer */
   #footer {
-    font-size: 0.8rem;
-    padding: 20px 5%;
+    padding: 15px 5%;
+    text-align: center;
+  }
+
+  #footer p {
+    font-size: 0.85rem;
   }
 }
 
-/* Ajustes extras para telas muito pequenas (até 480px) */
-@media (max-width: 480px) {
+/* Telas muito pequenas (até 360px) */
+@media (max-width: 360px) {
   h1 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 
   h2 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
   }
 
   .title-image {
-    max-width: 200px;
+    max-width: 180px;
   }
 
   .testimonials-image {
     width: 70px;
     height: 70px;
+  }
+
+  .press-logo {
+    max-height: 30px;
+    margin: 8px 5px;
+  }
+
+  .navbar-brand {
+    font-size: 1.6rem;
+  }
+}
+
+/* ========== AJUSTES GERAIS ========== */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
+
+.card {
+  min-height: 1px;
+}
+
+@media (max-width: 576px) {
+  .carousel-item h2 {
+    font-size: 1.3rem;
+    line-height: 1.4;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container-fluid {
+    max-width: 1320px;
+    margin: 0 auto;
   }
 }
