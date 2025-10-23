@@ -36,7 +36,7 @@ p {
 }
 
 .container-fluid {
-  padding: 3% 15%;
+  padding: 3% 15% 15%;
 }
 
 /* Navbar */
@@ -72,18 +72,22 @@ p {
   max-width: 400px;
   transform: rotate(15deg);
   transition: transform 0.3s ease;
+  position: absolute;
+  right: 21%;
 }
 
 /* ========== FEATURES SECTION ========== */
 #features {
   padding: 7% 15%;
+  background-color: #fff;
+  z-index: 1;
+  position: relative;
 }
 
 .features-box {
   text-align: center;
   padding: 5%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 2rem;
 }
 
 .features-box:hover {
@@ -147,6 +151,7 @@ p {
   filter: grayscale(100%);
   opacity: 0.8;
   transition: all 0.3s ease;
+  border-radius: 10px;
 }
 
 .press-logo:hover {
@@ -266,6 +271,38 @@ p {
   color: #aaa;
 }
 
+.social-icons a {
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.social-icons i {
+  font-size: 1.5rem;
+  color: #6c757d;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover i {
+  transform: translateY(-3px);
+}
+
+/* Cores específicas para cada rede social no hover */
+.social-icons a:hover .bi-facebook {
+  color: #1877f2;
+}
+
+.social-icons a:hover .bi-twitter-x {
+  color: #000000;
+}
+
+.social-icons a:hover .bi-instagram {
+  color: #e4405f;
+}
+
+.social-icons a:hover .bi-youtube {
+  color: #ff0000;
+}
+
 /* ========== MEDIA QUERIES - RESPONSIVIDADE ========== */
 
 /* Tablets Grandes (iPad Pro 11" - 834px) */
@@ -285,7 +322,9 @@ p {
   .title-image {
     max-width: 320px;
     transform: rotate(10deg);
-    margin-top: 2rem;
+    display: block;
+    margin: 2rem auto 0;
+    position: static;
   }
 
   /* Features - 2 colunas em tablet */
@@ -337,8 +376,9 @@ p {
   .title-image {
     max-width: 280px;
     transform: rotate(5deg);
-    margin: 2rem auto 0;
     display: block;
+    margin: 2rem auto 0;
+    position: static;
   }
 
   /* Features */
@@ -348,6 +388,7 @@ p {
 
   .features-box {
     padding: 2rem 1rem;
+    margin-bottom: 1rem;
   }
 
   /* Testimonials */
@@ -393,7 +434,19 @@ p {
   }
 }
 
-/* Celulares (até 480px) - Xiaomi Mi 11i etc */
+/* Responsivo para mobile */
+@media (max-width: 768px) {
+  .social-icons {
+    margin-bottom: 1.5rem !important;
+  }
+
+  .social-icons i {
+    font-size: 1.8rem;
+    margin: 0 8px;
+  }
+}
+
+/* Celulares (até 480px) - CORREÇÕES PRINCIPAIS */
 @media (max-width: 480px) {
   .container-fluid {
     padding: 8% 5%;
@@ -416,6 +469,7 @@ p {
   /* Hero Section */
   #title {
     padding: 15% 5%;
+    text-align: center;
   }
 
   h1 {
@@ -427,7 +481,9 @@ p {
   .title-image {
     max-width: 220px;
     transform: rotate(0deg);
+    display: block;
     margin: 1.5rem auto 0;
+    position: static;
   }
 
   /* Botões do hero */
@@ -437,20 +493,17 @@ p {
     margin: 0.5rem 0;
   }
 
-  /* FEATURES - CORREÇÃO PRINCIPAL: 1 COLUNA */
+  /* Features - 1 coluna em mobile */
   #features {
     padding: 12% 5%;
   }
 
   .features-box {
     padding: 1.5rem 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 
-  /* Garante que fique uma coluna em mobile */
-  #features .col-lg-4,
-  #features .col-md-6,
-  #features .col-12 {
+  #features .col-lg-4 {
     flex: 0 0 100%;
     max-width: 100%;
   }
@@ -475,6 +528,7 @@ p {
 
   .carousel-item h2 {
     font-size: 1.4rem;
+    line-height: 1.4;
   }
 
   /* Press */
@@ -520,7 +574,7 @@ p {
 
   /* Footer */
   #footer {
-    padding: 15px 5%;
+    padding: 20px 5%;
     text-align: center;
   }
 
@@ -587,12 +641,5 @@ img {
   .carousel-item h2 {
     font-size: 1.3rem;
     line-height: 1.4;
-  }
-}
-
-@media (min-width: 1400px) {
-  .container-fluid {
-    max-width: 1320px;
-    margin: 0 auto;
   }
 }
